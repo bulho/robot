@@ -1,0 +1,58 @@
+<div style="text-align:center" layout='column'>
+
+  <h1> The Great King Bowser Robot!</h1>
+  <img src="../assets/bowser.png" alt="Bowser" style="max-width:200px; height:auto">
+
+
+  <div class="frame" fxLayout='column' fxLayout.gt-md='row' fxLayoutGap="40px">
+
+    <mat-card fxFlex class="control-card">
+      <mat-card-header>
+        <mat-card-title>Robot Control</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="control-panel" fxLayout='column' fxLayoutGap="20px" fxLayoutAlign="center center">
+          <button mat-button color="primary" aria-label="fwd" class="command-button" [ngClass]="{ 'btn-pressed': commandedDirection == 'forward' }" (touchstart)="sendCommand('forward')" (touchend)="sendCommand('stop')">
+            <mat-icon>arrow_upward</mat-icon>
+          </button>
+          <div fxLayout='row' fxLayoutGap="20px">
+            <button mat-button color="primary" aria-label="fwd" class="command-button" [ngClass]="{ 'btn-pressed': commandedDirection == 'forward-left' }" (touchstart)="sendCommand('forward-left')" (touchend)="sendCommand('stop')">
+              <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button mat-button color="primary" aria-label="fwd" class="command-button" [ngClass]="{ 'btn-pressed': commandedDirection == 'rotate' }" (touchstart)="sendCommand('rotate')" (touchend)="sendCommand('stop')">
+              <mat-icon>cached</mat-icon>
+            </button>
+            <button mat-button color="primary" aria-label="fwd" class="command-button" [ngClass]="{ 'btn-pressed': commandedDirection == 'forward-right' }" (touchstart)="sendCommand('forward-right')" (touchend)="sendCommand('stop')">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
+          <button mat-button color="primary" aria-label="fwd" class="command-button" [ngClass]="{ 'btn-pressed': commandedDirection == 'reverse' }" (touchstart)="sendCommand('reverse')" (touchend)="sendCommand('stop')">
+            <mat-icon>arrow_downward</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+<!--
+    <mat-card fxFlex>
+      <mat-card-header>
+        <mat-card-title>System Log</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let msg of messages">
+            <div mat-line>
+              <span>{{msg.msg}}</span>
+              <span fxFlex></span>
+              <span>{{msg.data}}</span>
+            </div>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+-->
+
+  </div>
+
+
+</div>

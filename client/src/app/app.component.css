@@ -1,0 +1,25 @@
+
+
+
+.control-panel{
+    padding-bottom: 40px;
+}
+
+.control-panel button{
+    background-color: #12005e;
+    color: white;
+}
+
+.control-card{
+    background-color: #7c43bd;
+    color: white;
+}
+
+.command-button{
+    width: 100px;
+    height: 80px;
+}
+
+.btn-pressed{
+    background-color: red !important;
+}
